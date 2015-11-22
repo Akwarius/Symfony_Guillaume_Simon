@@ -1,0 +1,52 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    role_hierarchy:
+<<<<<<< Updated upstream
+        ROLE_ADMIN: [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
+=======
+            ROLE_ADMIN:        [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
+>>>>>>> Stashed changes
+    encoders:
+        AppBundle\Entity\User:
+            algorithm: bcrypt
+    providers:
+        our_db_provider:
+            entity:
+                class: AppBundle:User
+    firewalls:
+        default:
+            anonymous:  ~
+            pattern:    ^/
+            http_basic: ~
+            form_login:
+                login_path: /login
+                check_path: /login_check
+            provider:   our_db_provider
+            form_login:
+                            login_path: /login
+                            check_path: /login_check
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+<<<<<<< Updated upstream
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/admin, roles: ROLE_ADMIN }
+=======
+#        secured_area:
+#                    pattern: ^/admin
+#                    stateless: false
+#                    simple_preauth:
+#                        authenticator: apikey_authenticator
+#                    provider: api_key_user_provider
+
+#    providers:
+#        api_key_user_provider:
+#            id: api_key_user_provider
+
+    access_control:
+            # require ROLE_ADMIN for /admin*
+    - { path: ^/admin, roles: ROLE_ADMIN }
+>>>>>>> Stashed changes

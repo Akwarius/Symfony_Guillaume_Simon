@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+{% block body %}
+    <section>
+        {% for lesson in lessons %}
+            <article>
+<<<<<<< Updated upstream
+                <h1>{{ lesson.title }}</h1>
+                <p>{{ lesson.summary }}</p>
+                <p>{{ lesson.writer.username }}</p>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+=======
+                <h1><a href="./lesson/{{ lesson.id }}/edit">{{ lesson.title }}</a></h1>
+                <p>{{ lesson.summary }}</p>
+                <p>{{ lesson.content }}</p>
+                <p>{{ lesson.writer.username }}</p>
+            </article>
+            <hr>
+        {% endfor %}
+    </section>
+    <a href="./">
+        <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+    </a>
+{% endblock %}
+>>>>>>> Stashed changes
