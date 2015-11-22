@@ -15,13 +15,8 @@ class Grade
     /**
      * @var integer
      *
-<<<<<<< Updated upstream
-     * @ORM\Id
-     * @ORM\Column(name="id", type="integer")
-=======
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
->>>>>>> Stashed changes
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
@@ -50,18 +45,10 @@ class Grade
     /**
      * @var User
      *
-<<<<<<< Updated upstream
-     * @ORM\ManyToOne(targetEntity="User")
-     */
-    private $user;
-
-
-=======
      *  @ORM\ManyToOne(targetEntity="User")
      */
     private $user;
     
->>>>>>> Stashed changes
     /**
      * Get id
      *
@@ -71,10 +58,6 @@ class Grade
     {
         return $this->id;
     }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     /**
      * Set grade
      *
@@ -170,15 +153,4 @@ class Grade
     {
         return $this->user;
     }
-<<<<<<< Updated upstream
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->getComment();
-    }
-=======
->>>>>>> Stashed changes
 }

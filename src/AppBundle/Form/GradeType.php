@@ -19,12 +19,6 @@ class GradeType extends AbstractType
             ->add('comment')
             ->add('lesson')
             ->add('user')
-<<<<<<< Updated upstream
-//            ->add('submit', 'submit', [
-//                'label' => 'Create',
-//            ])
-=======
->>>>>>> Stashed changes
         ;
     }
     

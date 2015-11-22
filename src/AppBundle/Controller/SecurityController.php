@@ -1,13 +1,10 @@
 <?php
-<<<<<<< Updated upstream
-=======
 /**
  * Created by PhpStorm.
  * User: guillaumesimon
  * Date: 18/11/15
  * Time: 09:09
  */
->>>>>>> Stashed changes
 
 namespace AppBundle\Controller;
 
@@ -48,17 +45,6 @@ class SecurityController extends Controller
         // this controller will not be executed,
         // as the route is handled by the Security system
     }
-<<<<<<< Updated upstream
-
-//    /**
-//     * @Route("/admin/abc", name="admin")
-//     */
-//    public function adminAction()
-//    {
-//        dump('OK');die;
-//    }
-}
-=======
     /**
      * @Route("/admin/abc", name="admin")
      */
@@ -66,4 +52,3 @@ class SecurityController extends Controller
         dump('ok');die;
     }
 }
->>>>>>> Stashed changes

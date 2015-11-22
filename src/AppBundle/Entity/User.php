@@ -1,5 +1,6 @@
 <?php
 
+// src/AppBundle/Entity/User.php
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -46,21 +47,10 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $apiKey;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="api_key", type="string", length=100, unique=true)
-     */
-    private $apiKey;
-
     public function __construct()
     {
         $this->isActive = true;
-<<<<<<< Updated upstream
-        $this->apiKey   = md5(uniqid(mt_rand(), true));
-=======
         $this->api_key = md5(uniqid(mt_rand(), true));
->>>>>>> Stashed changes
         // may not be needed, see section on salt below
         // $this->salt = md5(uniqid(null, true));
     }
@@ -242,14 +232,11 @@ class User implements AdvancedUserInterface, \Serializable
         return $this;
     }
 
-<<<<<<< Updated upstream
-=======
     public function __toString()
     {
         return $this->getUsername();
     }
 
->>>>>>> Stashed changes
     /**
      * @return string
      */
@@ -260,27 +247,9 @@ class User implements AdvancedUserInterface, \Serializable
 
     /**
      * @param string $apiKey
-<<<<<<< Updated upstream
-     *
-     * @return User
-=======
->>>>>>> Stashed changes
      */
     public function setApiKey($apiKey)
     {
         $this->apiKey = $apiKey;
-<<<<<<< Updated upstream
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->getUsername();
-=======
->>>>>>> Stashed changes
     }
 }

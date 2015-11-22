@@ -2,11 +2,7 @@
 # http://symfony.com/doc/current/book/security.html
 security:
     role_hierarchy:
-<<<<<<< Updated upstream
-        ROLE_ADMIN: [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
-=======
             ROLE_ADMIN:        [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
->>>>>>> Stashed changes
     encoders:
         AppBundle\Entity\User:
             algorithm: bcrypt
@@ -19,9 +15,6 @@ security:
             anonymous:  ~
             pattern:    ^/
             http_basic: ~
-            form_login:
-                login_path: /login
-                check_path: /login_check
             provider:   our_db_provider
             form_login:
                             login_path: /login
@@ -30,11 +23,6 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-<<<<<<< Updated upstream
-    access_control:
-        # require ROLE_ADMIN for /admin*
-        - { path: ^/admin, roles: ROLE_ADMIN }
-=======
 #        secured_area:
 #                    pattern: ^/admin
 #                    stateless: false
@@ -49,4 +37,3 @@ security:
     access_control:
             # require ROLE_ADMIN for /admin*
     - { path: ^/admin, roles: ROLE_ADMIN }
->>>>>>> Stashed changes

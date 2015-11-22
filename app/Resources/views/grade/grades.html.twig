@@ -1,20 +1,8 @@
 {% extends 'base.html.twig' %}
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 {% block body %}
     <section>
         {% for grade in grades %}
             <article>
-<<<<<<< Updated upstream
-                <h1>{{ grade.lesson.title }}</h1>
-                <p>{{ grade.user.username }} got {{ grade.grade }}</p>
-            </article>
-        {% endfor %}
-    </section>
-{% endblock %}
-=======
                 <h1><a href="./grade/{{ grade.id }}/edit">{{ grade.lesson.title }}</a></h1>
                 <p>{{ grade.user.username }} got {{ grade.grade }}</p>
                 <p>{{ grade.comment }}</p>
@@ -27,4 +15,3 @@
         <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
     </a>
 {% endblock %}
->>>>>>> Stashed changes

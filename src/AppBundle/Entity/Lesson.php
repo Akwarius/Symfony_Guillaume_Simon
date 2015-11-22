@@ -41,22 +41,13 @@ class Lesson
      * @ORM\Column(name="content", type="text")
      */
     private $content;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     /**
      * @var User
      *
      * @ORM\ManyToOne(targetEntity="User")
      */
     private $writer;
-<<<<<<< Updated upstream
-
-
-=======
     
->>>>>>> Stashed changes
     /**
      * Get id
      *
@@ -146,11 +137,7 @@ class Lesson
      *
      * @return Lesson
      */
-<<<<<<< Updated upstream
-    public function setWriter(\AppBundle\Entity\User $writer = null)
-=======
     public function setWriter(User $writer = null)
->>>>>>> Stashed changes
     {
         $this->writer = $writer;
 
@@ -166,13 +153,6 @@ class Lesson
     {
         return $this->writer;
     }
-<<<<<<< Updated upstream
-
-    /**
-     * @return string
-     */
-=======
->>>>>>> Stashed changes
     public function __toString()
     {
         return $this->getTitle();

@@ -55,10 +55,6 @@ assetic:
         adminlte_css:
             inputs:
                 - '../vendor/almasaeed2010/adminlte/dist/css/AdminLTE.min.css'
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 # Doctrine Configuration
 doctrine:
     dbal:
